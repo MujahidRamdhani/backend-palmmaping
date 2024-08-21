@@ -1,0 +1,194 @@
+###
+// Login User koperasi
+POST http://localhost:9999/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "petani2@gmail.com",
+  "password": "123123123"
+}
+
+###
+// Login User koperasi
+POST http://localhost:9999/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "petani.admin@palmmapping.co.id",
+  "password": "Petani@PalmMapping2024"
+}
+
+###
+// Logout User
+DELETE http://localhost:9999/api/users/logout
+Content-Type: application/json
+Accept: application/json
+
+###
+Put http://localhost:9999/api/LegalitasLahan/FindOneLegalitasLahan/00123
+
+###
+// pengajuan legalitas lahan
+POST http://localhost:9999/api/legalitasLahan/CreateLegalitasLahan
+Content-Type: application/json
+Accept: application/json
+{
+    "nomorSTDB": "123",
+    "alamatKebun": "Alamat Kebun",
+    "statusKepemilikanLahan": "Status Kepemilikan",
+    "nomorSertifikat": "789",
+    "jenisTanaman": "Jenis Tanaman",
+    "produksiPerHaPerTahun": "Produksi",
+    "asalBenih": "Asal Benih",
+    "polaTanaman": "Pola Tanaman",
+    "jenisPupuk": "Jenis Pupuk",
+    "mitraPengolahan": "Mitra Pengolahan",
+    "jenisTanah": "Jenis Tanah",
+    "tahunTanaman": "Tahun Tanaman",
+    "usahaLainDikebun": "Usaha Lain",
+    "cidFileLegalitasKebun": "CID File Legalitas",
+    "cidFotoKebun": "CID Foto Kebun"
+}
+
+// pengajuan legalitas lahan
+###
+POST  http://localhost:9999/api/legalitasLahan/CreateLegalitasLahan
+Content-Type: application/json
+Accept: application/json
+
+{
+    "nomorSTDB": "4123123",
+    "alamatKebun": "Alamat Kebun",
+    "statusKepemilikanLahan": "Status Kepemilikan",
+    "nomorSertifikat": "789",
+    "jenisTanaman": "Jenis Tanaman",
+    "produksiPerHaPerTahun": "Produksi",
+    "asalBenih": "Asal Benih",
+    "polaTanaman": "Pola Tanaman",
+    "jenisPupuk": "Jenis Pupuk",
+    "mitraPengolahan": "Mitra Pengolahan",
+    "jenisTanah": "Jenis Tanah",
+    "tahunTanaman": "Tahun Tanaman",
+    "usahaLainDikebun": "Usaha Lain",
+    "cidFileLegalitasKebun": "CID File Legalitas",
+    "cidFotoKebun": "CID Foto Kebun"
+}
+
+
+
+###
+// get all pemetaan hutan
+GET  http://localhost:9999/api/legalitasLahan/GetAllLegalitasLahan
+Content-Type: application/json
+Accept: application/json
+
+###
+// confirm
+PUT  http://localhost:9999/api/legalitasLahan/PublishLegalitasLahan/0001
+Content-Type: application/json
+Accept: application/json
+
+{
+    "nomorSTDB" : "0001"
+}
+
+
+
+###
+// confirm
+PUT  http://localhost:9999/api/legalitasLahan/UpdateLegalitasLahan/0007
+Content-Type: application/json
+Accept: application/json
+
+
+
+
+###
+// create pemetaan Kebun
+POST  http://localhost:9999/api/pemetaanKebun/CreatePemetaanKebun
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nomorSTDB" : "123",
+  "idPemetaanKebun" : "0002123",
+  "latitude"  : "[001.202]",
+  "longitude" : "[001.202]",
+  "statusKawasan" : "Kebun",
+  "luasKebun"  : "12"
+}
+
+
+###
+// create pemetaan Kebun
+PUT  http://localhost:9999/api/pemetaanKebun/VerifyPemetaanKebun/0002123
+Content-Type: application/json
+Accept: application/json
+
+{
+  "statusVerifikator" : "Diterima",
+  "pesanVerifikator" : "False"
+}
+
+
+###
+// get all pemetaan Kebun
+GET  http://localhost:9999/api/pemetaanKebun/GetAllPemetaanKebun
+Content-Type: application/json
+Accept: application/json
+
+###
+// find one pemetaan Kebun
+put  http://localhost:9999/api/pemetaanKebun/FindOnePemetaanKebun/0001
+Content-Type: application/json
+Accept: application/json
+
+###
+PUT http://localhost:9999/api/pemetaanKebun/UpdatePemetaanKebun/0002123
+Content-Type: application/json
+Accept: application/json
+
+{
+  "latitude": "False Update",
+  "longitude": "False Update",
+  "statusKawasan": "False Update",
+  "luasKebun": "False Update",
+  "nomorSTDB": "0001",
+  "idPemetaanKebun": "0001",
+  "waktuPemetaanKebun": "False Update",
+  "waktuVerifikator": "False Update Update"
+}
+
+###
+// get all pemetaan Kebun
+GET  http://localhost:9999/api/pemetaanKebun/GetAllPemetaanKebun
+Content-Type: application/json
+Accept: application/json
+
+
+
+###
+// get all pemetaan Kebun
+POST  http://localhost:9999/api/legalitasLahan/addKebunToLegalitasLahan
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nomorSTDB" : "123",
+  "idPemetaanKebun" : "123123"
+}
+
+
+###
+// History pemetaan Kebun
+PUT  http://localhost:9999/api/pemetaanKebun/HistoryPemetaanKebun/0002123
+Content-Type: application/json
+Accept: application/json
+
+###
+// Delete pemetaan Kebun
+PUT  http://localhost:9999/api/pemetaanKebun/DeletePemetaanKebun/0002123
+Content-Type: application/json
+Accept: application/json

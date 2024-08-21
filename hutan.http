@@ -1,0 +1,78 @@
+
+###
+// create legalitas lahan
+POST http://localhost:9999/api/pemetaanHutan/CreatePemetaanHutan
+Content-Type: application/json
+Accept: application/json
+
+{
+  "idHutan" : "123",
+  "namaHutan" : "Hutan Lindung",
+  "longitude" : "[0.934454024134]",
+  "latitude"  : "[115.199035644999]",
+  "luasHutan"  : "29234,52"
+}
+
+###
+// get all pemetaan hutan
+GET  http://localhost:9999/api/pemetaanHutan/GetAllPemetaanHutan
+Content-Type: application/json
+Accept: application/json
+
+
+###
+POST  http://localhost:9999/api/pemetaanHutan/CreatePemetaanHutan
+Content-Type: application/json
+Accept: application/json
+
+{
+    "nomorSTDB": "4123123",
+    "alamatKebun": "Alamat Kebun",
+    "statusKepemilikanLahan": "Status Kepemilikan",
+    "nomorSertifikat": "789",
+    "jenisTanaman": "Jenis Tanaman",
+    "produksiPerHaPerTahun": "Produksi",
+    "asalBenih": "Asal Benih",
+    "polaTanaman": "Pola Tanaman",
+    "jenisPupuk": "Jenis Pupuk",
+    "mitraPengolahan": "Mitra Pengolahan",
+    "jenisTanah": "Jenis Tanah",
+    "tahunTanaman": "Tahun Tanaman",
+    "usahaLainDikebun": "Usaha Lain",
+    "cidFileLegalitasKebun": "CID File Legalitas",
+    "cidFotoKebun": "CID Foto Kebun"
+}
+###
+// get all pemetaan hutan
+GET  http://localhost:9999/api/pemetaanHutan/GetAllPemetaanHutan
+Content-Type: application/json
+Accept: application/json
+
+
+###
+// FindOne
+PUT  http://localhost:9999/api/pemetaanHutan/FindOnePemetaanHutan/123
+Content-Type: application/json
+Accept: application/json
+
+
+###
+// delete hutan
+PUT  http://localhost:9999/api/pemetaanHutan/DeletePemetaanHutan/12312123123
+Content-Type: application/json
+Accept: application/json
+
+###
+// Update pemetaan huta
+PUT  http://localhost:9999/api/pemetaanHutan/UpdatePemetaanHutan/123
+Content-Type: application/json
+Accept: application/json
+
+{
+  "namaHutan" : "Hutan Lindung Update",
+  "longitude" : "[001.202]",
+  "latitude"  : "[001.202]",
+  "luasHutan"  : "[001.202]",
+  "waktuPemetaanHutan"  : "[001.202]"
+}
+

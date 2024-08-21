@@ -1,0 +1,160 @@
+###
+// Login User koperasi
+POST http://localhost:9999/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "koperasi.admin@palmmapping.co.id",
+  "password": "Koperasi@PalmMapping2024"
+}
+
+
+###
+// Logout User
+DELETE http://localhost:9999/api/users/logout
+Content-Type: application/json
+Accept: application/json
+
+
+###
+// enroll Ca Admin Dinas
+POST http://localhost:9999/api/users/InvokeCaAdmin
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "koperasi.admin@palmmapping.co.id",
+  "password": "Koperasi@PalmMapping2024"
+}
+
+###
+// enroll Ca user Dinas
+POST http://localhost:9999/api/users/InvokeCaUser
+Content-Type: application/json
+Accept: application/json
+
+{
+  "emailUser": "petani4@gmail.com"
+}
+
+
+###
+// enroll Ca Admin Koperasi
+POST http://localhost:9999/api/users/InvokeCaAdmin
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "dinas.admin@palmmapping.co.id",
+  "password": "Dinas@PalmTrace2023"
+}
+
+###
+// enroll Ca user Koperasi
+POST http://localhost:9999/api/users/InvokeCaUser
+Content-Type: application/json
+Accept: application/json
+
+{
+  "emailUser": "koperasi5@gmail.com",
+  "roleUser": "KOPERASI"
+}
+
+
+###
+// enroll Ca Admin petani
+POST http://localhost:9999/api/users/InvokeCaAdmin
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "petani.admin@palmmapping.co.id",
+  "password": "Petani@PalmMapping2024"
+}
+
+###
+// login Petani
+POST http://localhost:9999/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "petani.admin@palmmapping.co.id",
+  "password": "Petani@PalmMapping2024"
+}
+###
+// enroll Ca user Petani
+POST http://localhost:9999/api/users/InvokeCaUser
+Content-Type: application/json
+Accept: application/json
+
+{
+  "emailUser": "petani@gmail.com"
+}
+
+###
+GET http://localhost:9999/api/users/findAllUsers
+Accept: application/json
+
+
+###
+// Login User koperasi
+POST http://localhost:9999/api/users/InvokeCaAdmin
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "dinas.admin@palmmapping.co.id",
+  "password": "Dinas@PalmMapping2024"
+}
+
+###
+// Login User Dinas
+POST http://localhost:9999/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "dinas.admin@palmmapping.co.id",
+  "password": "Dinas@PalmMapping2024"
+}
+
+###
+// Login User koperasi
+POST http://localhost:9999/api/users/InvokeCaAdmin
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "public.admin@palmmapping.co.id",
+  "password": "Public@PalmMapping2024"
+}
+
+
+###
+// Login User Dinas
+POST http://localhost:9999/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "public.admin@palmmapping.co.id",
+  "password": "Public@PalmMapping2024"
+}
+
+###
+// Register User Dinas
+POST http://localhost:9999/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "role": "public",
+  "nama": "Public Perkebunan",
+  "alamat": "Jl Mutiara Sawit",
+  "nomorTelepon": "081234567890",
+  "email": "public.admin@palmmapping.co.id",
+  "password": "Public@PalmMapping2024",
+  "nik": "12312312222"
+}

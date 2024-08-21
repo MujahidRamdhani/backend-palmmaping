@@ -1,0 +1,67 @@
+// pengajuan legalitas lahan
+###
+POST  http://localhost:9999/api/legalitasLahan/CreateDataKebun
+Content-Type: application/json
+Accept: application/json
+
+{
+    "nomorSTDB" : "01",
+    "alamatKebun": "Alamat Kebun Update 4",
+    "statusKepemilikanLahan": "Status Kepemilikan",
+    "nomorSertifikat": "789",
+    "jenisTanaman": "Jenis Tanaman",
+    "produksiPerHaPerTahun": "Produksi",
+    "asalBenih": "Asal Benih",
+    "polaTanaman": "Pola Tanaman",
+    "jenisPupuk": "Jenis Pupuk",
+    "jumlahPohon": "jumlah Pohon",
+    "mitraPengolahan": "Mitra Pengolahan",
+    "jenisTanah": "Jenis Tanah",
+    "tahunTanaman": "Tahun Tanaman",
+    "usahaLainDikebun": "Usaha Lain",
+    "cidFileLegalitasKebun": "CID File Legalitas",
+    "cidFotoKebun": "CID Foto Kebun"
+}
+
+// pengajuan legalitas lahan
+###
+POST  http://localhost:9999/api/legalitasLahan/CreateDataKebun
+Content-Type: application/json
+Accept: application/json
+
+{
+    "idDataKebun" : "d228ae01-741a-48f0-847c-32f2bebf0478-2024-08-17T20:22:36+07:00",
+    "nomorSTDB" : "012312132123",
+    "alamatKebun": "Alamat Kebun Update 4",
+    "statusKepemilikanLahan": "Status Kepemilikan",
+    "nomorSertifikat": "789123213",
+    "jenisTanaman": "Jenis Tanaman",
+    "produksiPerHaPerTahun": "Produksi",
+    "asalBenih": "Asal Benih",
+    "polaTanaman": "Pola Tanaman",
+    "jenisPupuk": "Jenis Pupuk",
+    "jumlahPohon": "jumlah Pohon",
+    "mitraPengolahan": "Mitra Pengolahan",
+    "jenisTanah": "Jenis Tanah",
+    "tahunTanaman": "Tahun Tanaman",
+    "usahaLainDikebun": "Usaha Lain",
+    "cidFileLegalitasKebun": "CID File Legalitas",
+    "cidFotoKebun": "CID Foto Kebun"
+}
+
+
+// pengajuan legalitas lahan
+###
+POST  http://localhost:9999/api/legalitasLahan/CreateDataKebun
+Content-Type: application/json
+Accept: application/json
+
+{
+    
+    "idDataKebun": "01232"
+}
+
+###
+// History pemetaan Kebun
+PUT  http://localhost:9999/api/legalitasLahan/HistoryLegalitasLahan/d228ae01-741a-48f0-847c-32f2bebf0478-2024-08-17T20:22:36+07:00
+Accept: application/json

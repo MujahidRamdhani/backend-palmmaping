@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE `akun` MODIFY `wallet` VARCHAR(10) NOT NULL DEFAULT 'FALSE',
+    ALTER COLUMN `updated_at` DROP DEFAULT,
+    MODIFY `profilLengkap` VARCHAR(10) NOT NULL DEFAULT 'FALSE';

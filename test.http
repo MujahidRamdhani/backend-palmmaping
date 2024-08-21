@@ -1,0 +1,221 @@
+###
+// Register User kopearsi
+POST http://localhost:9999/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "role": "koperasi",
+  "nama": "koperasi Sawit",
+  "alamat": "Jl Mutiara Sawit",
+  "nomorTelepon": "081234567890",
+  "email": "koperasi.admin@palmmapping.co.id",
+  "password": "122",
+  "nik" : "444123123"
+}
+
+###
+// Register User Petani
+POST http://localhost:9999/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "role": "petani",
+  "nama": "petani Sawit",
+  "alamat": "Jl Mutiara Sawit",
+  "nomorTelepon": "081234567890",
+  "email": "petani15@gmail.com",
+  "password": "1234567825",
+  "nik" : "124123"
+}
+
+###
+// Login User Dinas
+POST http://localhost:9999/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "koperasi1@gmail.com",
+  "password": "123456782"
+}
+###
+// Login User Dinas
+POST http://localhost:9999/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "dinas.admin@palmmapping.co.id",
+  "password": "Dinas@PalmMapping2024"
+}
+
+###
+// Login User Dinas
+POST http://localhost:9999/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "dinas4@gmail.com",
+  "password": "123456782"
+}
+
+
+###
+// Get Current User
+GET http://localhost:9999/api/users/me
+Content-Type: application/json
+Accept: application/json
+
+###
+// Logout User
+DELETE http://localhost:9999/api/users/logout
+Content-Type: application/json
+Accept: application/json
+
+###
+// enroll Ca Admin Dinas
+POST http://localhost:9999/api/users/InvokeCaAdmin
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "dinas.admin@palmmapping.co.id",
+  "password": "Dinas@PalmTrace2023"
+}
+###
+// enroll Ca user Dinas
+POST http://localhost:9999/api/users/InvokeCaUser
+Content-Type: application/json
+Accept: application/json
+
+{
+  "emailUser": "dinas4@gmail.com"
+}
+
+###
+// create pemetaan Hutan
+POST http://localhost:9999/api/pemetaanHutan/CreatePemetaanHutan
+Content-Type: application/json
+Accept: application/json
+
+{
+  "idHutan" : "1231242123123",
+  "namaHutan" : "Hutan Lindung",
+  "longitude" : "[001.202]",
+  "latitude"  : "[001.202]"
+}
+
+
+###
+// Inisialisasi Referensi Harga
+POST http://localhost:3000/api/referensi-harga-init
+Content-Type: application/json
+Accept: application/json
+
+###
+// Tambah Referensi Harga
+POST http://localhost:9999/api/referensi-harga
+Content-Type: application/json
+Accept: application/json
+
+{
+  "umurTanam": 1,
+  "harga": 0
+}
+
+###
+// Ubah Referensi Harga
+PUT http://localhost:9999/api/referensi-harga/:idReferensiHarga
+Content-Type: application/json
+Accept: application/json
+
+{
+  "umurTanam": 1,
+  "harga": 1000
+}
+
+###
+// Get All Referensi Harga
+GET http://localhost:9999/api/referensi-harga
+Content-Type: application/json
+Accept: application/json
+
+###
+// Get Transaksi with History
+GET http://localhost:9999/api/referensi-harga/:idReferensiHarga
+Content-Type: application/json
+Accept: application/json
+
+
+###
+// Tambah Kebun
+POST http://localhost:9999/api/users/petani/kebun
+Content-Type: application/json
+Accept: application/json
+
+{
+  "alamat": "Jl Kebun Test I",
+  "latitude": "107.609810",
+  "longitude": "-6.914744",
+  "luas": 50,
+  "nomorRspo": "RSPO-1234567890",
+  "sertifikatRspo": "sertifikat-rspo-1234567890.pdf"
+}
+
+###
+// Ubah Kebun
+PUT http://localhost:9999/api/users/petani/kebun/:idKebun
+Content-Type: application/json
+Accept: application/json
+
+{
+  "alamat": "Jl Kebun Test II",
+  "latitude": "107.609810",
+  "longitude": "-6.914744",
+  "luas": 100,
+  "nomorRspo": "RSPO-1234567890",
+  "sertifikatRspo": "sertifikat-rspo-1234567890.pdf"
+}
+
+###
+// Get All Kebun by ID Petani
+GET http://localhost:9999/api/users/petani/kebun
+Content-Type: application/json
+Accept: application/json
+
+###
+// Get Kebun with History
+GET http://localhost:9999/api/users/petani/kebun/:idKebun
+Content-Type: application/json
+Accept: application/json
+
+
+###
+// Tambah Kontrak by PKS
+POST http://localhost:9999/api/rantai-pasok/kontrak
+Content-Type: application/json
+Accept: application/json
+
+{
+  "idKoperasi": "",
+  "tanggalMulai": "2023-01-01",
+  "tanggalSelesai": "2023-12-31",
+  "kuantitas": 12000,
+  "harga": 1000
+}
+
+
+###
+// Konfirmasi Kontrak by Koperasi
+PUT http://localhost:9999/api/rantai-pasok/kontrak/:idKontrak
+Content-Type: application/json
+Accept: application/json
+
+{
+  "idPks": "",
+  "status": 1,
+  "pesan": "OK. Kami setuju dengan kontrak tersebut."
+}
