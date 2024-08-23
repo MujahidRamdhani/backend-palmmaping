@@ -93,6 +93,8 @@ const readFile = async (pathFilename) => {
 async function getNetworkInfo(organizationName) {
   
     const fabricConfig = await readFile('src/config/fabric-config.json');;
+
+    console.log(fabricConfig)
     const { email, password, msp, connectionProfile } = JSON.parse(fabricConfig).orgs[organizationName];;
     const { certificateAuthorities } = connectionProfile;
     const { url, caName, tlsCACerts, } = certificateAuthorities[Object.keys(certificateAuthorities)[0]];
@@ -102,5 +104,19 @@ async function getNetworkInfo(organizationName) {
 }
 
 
-const util = { getAttributeName, getNetworkInfo};
+async function getNetworkInfoAdmin(organizationName) {
+  
+  const fabricConfig = await readFile('src/config/fabric-config.json');;
+
+  console.log(fabricConfig)
+  const { email, password, msp, connectionProfile } = JSON.parse(fabricConfig).orgs[organizationName];;
+  const { certificateAuthorities } = connectionProfile;
+  const { url, caName, tlsCACerts, } = certificateAuthorities[Object.keys(certificateAuthorities)[0]];
+  const caTLSCACerts = tlsCACerts.pem;
+  const caUrl = url;
+  return {msp, caTLSCACerts, caUrl, caName,  password, connectionProfile, email}
+}
+
+
+const util = { getAttributeName, getNetworkInfo, getNetworkInfoAdmin};
 export default util;

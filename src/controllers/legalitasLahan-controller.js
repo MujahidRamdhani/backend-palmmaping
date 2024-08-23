@@ -185,11 +185,22 @@ const updateStatusConfirm = async (req, res, next)  => {
     try {
         const user = req.user;
         const nomorSTDB = req.params.nomorSTDB;
-        const result = await legalitasLahanServices.updateStatusConfirm(user, nomorSTDB)
+        const request = req.body;
+        console.log('nomor stdb',nomorSTDB)
+        console.log('request', request)
+        // const result = await legalitasLahanServices.updateStatusConfirm(user, request, nomorSTDB)
+       const resul2 = await pemetaanKebunServices.deleteKebun(user, request.idPemetaanKebun)
+        // if (request.idPemetaanKebun !== 'Belum dipetakan') {
+        //     await Promise.all([
+        //         pemetaanKebunServices.deleteKebun(user, request.idPemetaanKebun),
+        //         result 
+        //     ]);
+        // }
+        
         
         res.status(status.OK).json({
             status: `${status.OK} ${status[status.OK]}`,
-            data: result,
+            data: resul2,
           });
     } catch (error) {
         next(error);

@@ -23,7 +23,6 @@ router.put('/api/legalitasLahan/HistoryLegalitasLahan/:nomorSTDB', authRoleMiddl
 router.put('/api/legalitasLahan/FindOneLegalitasLahan/:nomorSTDB', authRoleMiddleware([koperasiRole, dinasRole, petaniRole]), legalitasLahanController.findOneLegalitasLahan);
 router.put('/api/legalitasLahan/UpdateLegalitasLahan/:nomorSTDB', authRoleMiddleware([koperasiRole, dinasRole, petaniRole]), legalitasLahanController.updateLegalitasLahan);
 router.post('/api/legalitasLahan/CreateDataKebun', authRoleMiddleware([, koperasiRole, petaniRole]), legalitasLahanController.CreateLegalitasLahanBaru);
-router.put('api/legalitasLahan/UpdateStatusConfirmLegalitasLahan/:nomorSTDB', authRoleMiddleware([koperasiRole, dinasRole, petaniRole]), legalitasLahanController.updateStatusConfirm);
-
+router.put('/api/legalitasLahan/UpdateStatusConfirmLegalitasLahan/:nomorSTDB', authRoleMiddleware([koperasiRole, dinasRole, petaniRole]), legalitasLahanController.updateStatusConfirm);
 
 export default router;

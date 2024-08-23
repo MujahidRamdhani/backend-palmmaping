@@ -177,12 +177,12 @@ const login = async (session, request) => {
     throw new ResponseError(401, 'Email atau password salah');
   }
 
-  // //validasi Ca
-  // const identity = await wallet.getIdentity(userRequest.email);
+  //validasi Ca
+  const identity = await wallet.getIdentity(userRequest.email);
     
-  //   if (!identity) {
-  //     throw new ResponseError(403, 'Akun Belum Mempunyai Certificate Authory');
-  //   }
+    if (!identity) {
+      throw new ResponseError(403, 'Akun Belum Mempunyai Certificate Authory');
+    }
 
   const { tableName, roleName } = util.getAttributeName(akun.role);
   let user;

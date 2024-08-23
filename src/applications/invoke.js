@@ -4,17 +4,13 @@ import util from '../utils/util.js';
 import userService from '../services/user-service.js';
 
 async function enrollAdmin(adminId, role) {
-    console.log('enrollAdmin', adminId, role)
     const { organizationName } = util.getAttributeName(role);
-    const {caTLSCACerts, caUrl, password, caName, msp, email } = await util.getNetworkInfo(organizationName);
-    console.log('tes', email, msp, caUrl, password, caName, caTLSCACerts, adminId);
-    console.log('tes 2', organizationName);
+    const {caTLSCACerts, caUrl, password, caName, msp, email } = await util.getNetworkInfoAdmin(organizationName);
     const enrollmentSecret = password;
     const ca = new FabricCAServices(caUrl, { trustedRoots: caTLSCACerts, verify: false }, caName);
     const adminExists = await wallet.getIdentity(adminId);
     if (adminExists) {
-        console.log('An identity for the admin user "admin" already exists in the wallet');
-        return
+        throw new ResponseError(403, `Identitas untuk pengguna : "${adminId}" sudah ada di dalam wallet`);
     }
 
     const enrollment = await ca.enroll({ enrollmentID: email, enrollmentSecret: enrollmentSecret });

@@ -19,6 +19,7 @@ router.put('/api/pemetaanKebun/VerifyPemetaanKebun/:idPemetaanKebun', authRoleMi
 router.put('/api/pemetaanKebun/HistoryPemetaanKebun/:idPemetaanKebun', authRoleMiddleware([koperasiRole, dinasRole]), pemetaanKebunController.historyPemetaanKebun);
 router.put('/api/pemetaanKebun/FindOnePemetaanKebun/:idPemetaanKebun', authRoleMiddleware([koperasiRole, dinasRole]), pemetaanKebunController.findOnePemetaanKebun);
 router.put('/api/pemetaanKebun/UpdatePemetaanKebun/:idPemetaanKebun', authRoleMiddleware([koperasiRole, dinasRole]), pemetaanKebunController.updatePemetaanKebun);
+router.put('/api/pemetaanKebun/UpdateStatusVerify/:idPemetaanKebun', authRoleMiddleware([koperasiRole, dinasRole]), pemetaanKebunController.updateStatusVerify);
 router.get('/api/pemetaanKebun/GetAllPemetaanKebun', authRoleMiddleware([dinasRole, koperasiRole, petaniRole]), pemetaanKebunController.getAllPemetaanKebun);
 router.put('/api/pemetaanKebun/DeletePemetaanKebun/:idPemetaanKebun', authRoleMiddleware([koperasiRole, dinasRole]), pemetaanKebunController.deletePemetaanKebun);
 export default router;

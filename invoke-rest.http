@@ -1,6 +1,6 @@
 ###
 // Login User koperasi
-POST http://localhost:9999/api/users/login
+POST https://palmmapping-backend.my.to/api/users/login
 Content-Type: application/json
 Accept: application/json
 
@@ -12,7 +12,7 @@ Accept: application/json
 
 ###
 // Login User koperasi
-POST http://localhost:9999/api/users/login
+POST http://palmmapping-backend.my.to/api/users/login
 Content-Type: application/json
 Accept: application/json
 
@@ -24,14 +24,14 @@ Accept: application/json
 
 ###
 // Logout User
-DELETE http://localhost:9999/api/users/logout
+DELETE http://palmmapping-backend.my.to/api/users/logout
 Content-Type: application/json
 Accept: application/json
 
 
 ###
 // enroll Ca Admin Dinas
-POST http://localhost:9999/api/users/InvokeCaAdmin
+POST http://palmmapping-backend.my.to/api/users/InvokeCaAdmin
 Content-Type: application/json
 Accept: application/json
 
@@ -42,7 +42,7 @@ Accept: application/json
 
 ###
 // enroll Ca user Dinas
-POST http://localhost:9999/api/users/InvokeCaUser
+POST http://palmmapping-backend.my.to/api/users/InvokeCaUser
 Content-Type: application/json
 Accept: application/json
 
@@ -55,7 +55,7 @@ Accept: application/json
 
 ###
 // enroll Ca user Koperasi
-POST http://localhost:9999/api/users/InvokeCaUser
+POST http://palmmapping-backend.my.to/api/users/InvokeCaUser
 Content-Type: application/json
 Accept: application/json
 
@@ -67,7 +67,7 @@ Accept: application/json
 
 ###
 // enroll Ca Admin petani
-POST http://localhost:9999/api/users/InvokeCaAdmin
+POST http://palmmapping-backend.my.to/api/users/InvokeCaAdmin
 Content-Type: application/json
 Accept: application/json
 
@@ -78,7 +78,7 @@ Accept: application/json
 
 ###
 // login Petani
-POST http://localhost:9999/api/users/login
+POST http://palmmapping-backend.my.to/api/users/login
 Content-Type: application/json
 Accept: application/json
 
@@ -88,7 +88,7 @@ Accept: application/json
 }
 ###
 // enroll Ca user Petani
-POST http://localhost:9999/api/users/InvokeCaUser
+POST http://palmmapping-backend.my.to/api/users/InvokeCaUser
 Content-Type: application/json
 Accept: application/json
 
@@ -97,13 +97,13 @@ Accept: application/json
 }
 
 ###
-GET http://localhost:9999/api/users/findAllUsers
+GET http://palmmapping-backend.my.to/api/users/findAllUsers
 Accept: application/json
 
 
 ###
 // Login User koperasi
-POST http://localhost:9999/api/users/InvokeCaAdmin
+POST http://palmmapping-backend.my.to/api/users/InvokeCaAdmin
 Content-Type: application/json
 Accept: application/json
 
@@ -114,7 +114,7 @@ Accept: application/json
 
 ###
 // Login User Dinas
-POST http://localhost:9999/api/users/login
+POST http://palmmapping-backend.my.to/api/users/login
 Content-Type: application/json
 Accept: application/json
 
@@ -125,7 +125,7 @@ Accept: application/json
 
 ###
 // Login User koperasi
-POST http://localhost:9999/api/users/InvokeCaAdmin
+POST http://palmmapping-backend.my.to/api/users/InvokeCaAdmin
 Content-Type: application/json
 Accept: application/json
 
@@ -137,7 +137,7 @@ Accept: application/json
 
 ###
 // Login User Dinas
-POST http://localhost:9999/api/users/login
+POST http://palmmapping-backend.my.to/api/users/login
 Content-Type: application/json
 Accept: application/json
 
@@ -148,7 +148,7 @@ Accept: application/json
 
 ###
 // Register User Dinas
-POST http://localhost:9999/api/users
+POST http://palmmapping-backend.my.to/api/users
 Content-Type: application/json
 Accept: application/json
 

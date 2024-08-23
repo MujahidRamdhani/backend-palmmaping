@@ -7,7 +7,7 @@ import invoke from '../src/applications/invoke.js';
 const main = async () => {
   try {
     
-    const email = 'kopreasi.admin2@palmmapping.co.id';
+    const email = 'koprasi.admin4@palmmapping.co.id';
     const role = 'koperasi';
     await prismaClient.akun.upsert({
       where: { email: email },
@@ -27,7 +27,7 @@ const main = async () => {
       
     });
 
-   await invoke.enrollAdmin(email, role)
+   
   } catch (error) {
     console.error(error);
   }
